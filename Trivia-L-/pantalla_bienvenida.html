@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trivia SaVa</title>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body onload="bringName()">
+    <div class="container">
+        <div class="home">
+            <h1 id="mensaje-bienvenida"></h1> 
+            <p>Selecciona la categoría de juego para empezar</p>
+            <button class="btn" onclick="redirigirCategoria('categoria1')">Entretenimiento</button>
+            <button class="btn" onclick="redirigirCategoria('categoria2')">Geografía</button>
+               <!-- <a class="btn" href="/pregunta1.html">Categoría 1</a> 
+               <a cl:ass="btn" href="/pregunta1.html">Categoría 2</a> -->
+        </div>
+        <div id="categoria1" onload="mostrarPregunta1()">
+          <p>Entretenimiento</p>
+          <div id="pregunta1">
+            <p>¿En que año se estrenó la película "End Game"?</p>
+            <button class="btn" onclick="siguientePregunta1('pregunta2', 'correcta')">2019</button>
+            <button class="btn" onclick="siguientePregunta1('pregunta2')">2020</button>
+            <button class="btn" onclick="siguientePregunta1('pregunta2')">2015</button>
+            <button class="btn" onclick="siguientePregunta1('pregunta2')">2018</button>
+          </div>
+          <div id="pregunta2">
+            <p>¿Como se llama a hija de Kylie Kardashian?</p>
+            <button class="btn" onclick="siguientePregunta1('pregunta3')">Chloe</button>
+            <button class="btn" onclick="siguientePregunta1('pregunta3', 'correcta')">Stormi</button>
+            <button class="btn" onclick="siguientePregunta1('pregunta3')">Eva</button>
+            <button class="btn" onclick="siguientePregunta1('pregunta3')">North</button>
+          </div>
+          <div id="pregunta3">
+            <p>¿Como se llama el actor que interpreta a Jon Snow en la serie "Game of Thrones"?</p>
+            <button class="btn" onclick="mostrarPuntaje('categoria1')">Jason Momoa</button>
+            <button class="btn" onclick="mostrarPuntaje('categoria1')">Peter Dinklage</button>
+            <button class="btn" onclick="mostrarPuntaje('categoria1')">James Deen</button>
+            <button class="btn" onclick="mostrarPuntaje('categoria1','correcta')">Kit Harington</button>
+          </div>
+          <div id="puntaje1" onload="bringScore()">
+            <p id="mensaje-puntaje"></p>
+            <input class="btn" type="button" value="Elegir categoria" onclick="location.reload()"/>
+            <a class="btn" href="index.html">Nuevo juego</a>
+          </div>
+        </div>
+        <div id="categoria2">
+          <p>Geografía</p>  
+          <div id="pregunta4">
+            <p>¿Cuál es la capital de Indonesia ?</p>
+            <button class="btn" onclick="siguientePregunta2('pregunta5')">Kuala Lumpur</button>
+            <button class="btn" onclick="siguientePregunta2('pregunta5', 'correcta')">Yakarta</button>
+            <button class="btn" onclick="siguientePregunta2('pregunta5')">Katmandú</button>
+            <button class="btn" onclick="siguientePregunta2('pregunta4')">Mataram</button>
+          </div>
+          <div id="pregunta5">
+            <p>Cuál es el país más grande en superficie del mundo?</p>
+            <button class="btn" onclick="siguientePregunta2('pregunta6', 'correcta')">Rusia</button>
+            <button class="btn" onclick="siguientePregunta2('pregunta6')">China</button>
+            <button class="btn" onclick="siguientePregunta2('pregunta6')">Estados Unidos</button>
+            <button class="btn" onclick="siguientePregunta2('pregunta6')">Brasil</button>
+          </div>
+          <div id="pregunta6">
+            <p>¿Cuál es el río más largo del mundo?</p>
+            <button class="btn" onclick="mostrarPuntaje('categoria2')">Amazonas</button>
+            <button class="btn" onclick="mostrarPuntaje('categoria2')">Yangtsé</button>
+            <button class="btn" onclick="mostrarPuntaje('categoria2')">Río Amarillo</button>
+            <button class="btn" onclick="mostrarPuntaje('categoria2','correcta')">Nilo</button>
+          </div>
+          <div id="puntaje2" onload="bringScore()">
+            <p id="mensaje-puntaje"></p>
+            <input class="btn" type="button" value="Elegir categoria" onclick="location.reload()"/>
+            <a class="btn" href="index.html">Nuevo juego</a>
+          </div>
+        </div>
+    </div>
+        <div id="buttons">
+            <button id=""></button>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
